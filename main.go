@@ -4,10 +4,11 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/codegangsta/envy/lib"
-	"github.com/codegangsta/gin/lib"
-	shellwords "github.com/mattn/go-shellwords"
 	"gopkg.in/urfave/cli.v1"
+	"thebookpeople.com/gin/lib"
+
+	"github.com/codegangsta/envy/lib"
+	shellwords "github.com/mattn/go-shellwords"
 
 	"log"
 	"os"
@@ -215,7 +216,7 @@ func scanChanges(watchPath string, excludeDirs []string, cb scanCallback) {
 				return nil
 			}
 
-			if filepath.Ext(path) == ".go" && info.ModTime().After(startTime) {
+			if (filepath.Ext(path) == ".go" || filepath.Ext(path) == ".html") && info.ModTime().After(startTime) {
 				cb(path)
 				startTime = time.Now()
 				return errors.New("done")

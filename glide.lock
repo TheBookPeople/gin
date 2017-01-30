@@ -1,0 +1,14 @@
+hash: 112144e60374166df25021597209133e6964f01788bd43daef03f29d6f29cc85
+updated: 2017-01-30T16:40:50.783673812Z
+imports:
+- name: github.com/codegangsta/envy
+  version: 4b78388c8ce4fa412440ca4eaa654e2fdd752e49
+  subpackages:
+  - lib
+- name: github.com/mattn/go-shellwords
+  version: 753a2322a99f87c0eff284980e77f53041555bc6
+testImports:
+- name: github.com/codegangsta/gin
+  version: b2d0f660ae0db9c0a6e9fbdf0349e138f3802292
+  subpackages:
+  - lib

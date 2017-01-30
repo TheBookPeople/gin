@@ -1,0 +1,11 @@
+package: .
+import:
+- package: github.com/codegangsta/envy
+  subpackages:
+  - lib
+- package: github.com/mattn/go-shellwords
+  version: ^v1.0.1
+testImport:
+- package: github.com/codegangsta/gin
+  subpackages:
+  - lib
